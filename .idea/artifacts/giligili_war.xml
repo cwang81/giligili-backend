@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="giligili:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>giligili</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="giligili-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="giligili:war exploded" />
+    </root>
+  </artifact>
+</component>
