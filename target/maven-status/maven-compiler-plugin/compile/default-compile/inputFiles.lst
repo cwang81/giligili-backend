@@ -1,3 +1,8 @@
-D:\Code\giligili\src\main\java\com\laioffer\giligili\GameServlet.java
+D:\Code\giligili\src\main\java\com\laioffer\giligili\entity\Item.java
+D:\Code\giligili\src\main\java\com\laioffer\giligili\servlet\GameServlet.java
 D:\Code\giligili\src\main\java\com\laioffer\giligili\entity\Game.java
+D:\Code\giligili\src\main\java\com\laioffer\giligili\entity\ItemType.java
 D:\Code\giligili\src\main\java\com\laioffer\giligili\HelloServlet.java
+D:\Code\giligili\src\main\java\com\laioffer\giligili\servlet\SearchServlet.java
+D:\Code\giligili\src\main\java\com\laioffer\giligili\external\TwitchClient.java
+D:\Code\giligili\src\main\java\com\laioffer\giligili\external\TwitchException.java
