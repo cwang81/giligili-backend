@@ -11,8 +11,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "LoginServlet", value = "/login")
+@WebServlet(name = "LoginServlet", urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Read user data from the request body
         ObjectMapper mapper = new ObjectMapper();
@@ -41,7 +42,7 @@ public class LoginServlet extends HttpServlet {
             // Create a new session, put user ID as an attribute into the session object, and set the expiration time to 600 seconds.
             HttpSession session = request.getSession();
             session.setAttribute("user_id", body.getUserId());
-            session.setMaxInactiveInterval(600); // session deactivate in 600 seconds
+            session.setMaxInactiveInterval(600);
 
             LoginResponseBody loginResponseBody = new LoginResponseBody(body.getUserId(), username);
             response.setContentType("application/json;charset=UTF-8");

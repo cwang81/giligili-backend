@@ -179,6 +179,10 @@ public class MySQLConnection {
 
     // Verify if the given user Id and password are correct. Returns the user name when it passes
     public String verifyLogin(String userId, String password) throws MySQLException {
+        if (conn == null) {
+            System.err.println("DB connection failed");
+            throw new MySQLException("Failed to connect to Database");
+        }
         String name = "";
         String sql = "SELECT first_name, last_name FROM users WHERE id = ? AND password = ?";
         try {
@@ -187,11 +191,11 @@ public class MySQLConnection {
             statement.setString(2, password);
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
-                name = rs.getString("first_name") + " " + rs.getString("password");
+                name = rs.getString("first_name") + " " + rs.getString("last_name");
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-            throw new MySQLException("Failed to verify login.");
+            throw new MySQLException("Failed to verify user id and password from Database");
         }
         return name;
     }
