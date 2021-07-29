@@ -1,0 +1,7 @@
+com\laioffer\giligili\entity\User.class
+com\laioffer\giligili\entity\LoginRequestBody.class
+com\laioffer\giligili\entity\User$Builder.class
+com\laioffer\giligili\entity\LoginResponseBody.class
+com\laioffer\giligili\servlet\RegisterServlet.class
+com\laioffer\giligili\servlet\ServletUtil.class
+com\laioffer\giligili\entity\User$1.class
